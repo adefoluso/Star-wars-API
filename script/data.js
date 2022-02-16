@@ -16,17 +16,17 @@ const data = [
 
   {
     id: 4,
-    image: "img/7.jpeg",
+    image: "img/3.png",
   },
 
   {
     id: 5,
-    image: "img/8.jpeg",
+    image: "img/1.png",
   },
 
   {
     id: 6,
-    image: "img/8.jpeg",
+    image: "img/11.png",
   },
 
   {
@@ -36,16 +36,16 @@ const data = [
 
   {
     id: 8,
-    image: "img/8.jpeg",
+    image: "img/5.png",
   },
 
   {
     id: 9,
-    image: "img/6.jpeg",
+    image: "img/12.png",
   },
 
   {
     id: 10,
-    image: "img/7.jpeg",
+    image: "img/6.jpeg",
   },
 ];

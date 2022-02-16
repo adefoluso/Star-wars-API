@@ -26,6 +26,7 @@ const getInfo = async (id) => {
     modal.innerHTML += `
         <h1>Loading...</h1>
     `;
+    
     const response = await fetch(`https://swapi.dev/api/people/${id}`)
     const jsonData = await response.json();
     console.log(jsonData);
@@ -33,10 +34,12 @@ const getInfo = async (id) => {
     if(jsonData) {
         modal.innerHTML = `
             <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="close" onclick="closeModal()">
+                <div>&times;</div>
+                </div>
 
-                <h3>Name: ${jsonData.name}</h3>
-                <h3>Gender: ${jsonData.gender}</h3>
+                <h3 class="">Name: ${jsonData.name}</h3>
+                <h3 class="text"> Gender: ${jsonData.gender}</h3>
                 <h3>Height: ${jsonData.height}</h3>
             </div>
         `;
@@ -46,24 +49,3 @@ const getInfo = async (id) => {
 }
 
 parentDiv.addEventListener("click", closeModal);
-
-// const main = async() =>{
-
-// const starWarsPeopleList = document.querySelector('div');
-
-// fetch('https://swapi.dev/api/people')
-// .then(function(response) {
-//   return response.json();
-// })
-// .then(function(json) {
-//   let people = json.results;
-
-//   for(p of people) {
-//     let listItem = document.createElement('li');
-//     listItem.innerHTML = '<p>' + p.name + '</p>';
-//     starWarsPeopleList.appendChild(listItem);
-//   }
-
-// })};
-
-// main();
